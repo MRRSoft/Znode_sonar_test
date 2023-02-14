@@ -33,7 +33,7 @@ namespace Basket.API.Controllers
         public async Task<ActionResult<ShoppingCart>> GetBasket(string userName)
         {
             var basket = await _repository.GetBasket(userName);
-            var _testcode = "@#$%^&*(@#$%^&*SDFGHJ";
+            var _testcode = "@#$%^&*(@#$%^&*SDFGHJ#$%^&";
             return Ok(basket ?? new ShoppingCart(userName));
         }
 
