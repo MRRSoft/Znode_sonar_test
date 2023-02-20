@@ -52,6 +52,7 @@ namespace Basket.API.Controllers
                 var coupon = await _discountGrpcService.GetDiscount(item.ProductName);
                 item.Price -= coupon.Amount;
             }
+            var _testcode5 = "@#$%^&*(@#$%^&*SDFGHJ#$%^&@@##";
 
             return Ok(await _repository.UpdateBasket(basket));
         }
