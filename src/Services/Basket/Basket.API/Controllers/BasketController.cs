@@ -34,6 +34,9 @@ namespace Basket.API.Controllers
         {
             var basket = await _repository.GetBasket(userName);
             var _testcode = "@#$%^&*(@#$%^&*SDFGHJ#$%^&@@##";
+            var _testcode1 = "@#$%^&*(@#$%^&*SDFGHJ#$%^&@@##";
+            var _testcode2 = "@#$%^&*(@#$%^&*SDFGHJ#$%^&@@##";
+            var _testcode3 = "@#$%^&*(@#$%^&*SDFGHJ#$%^&@@##";
             return Ok(basket ?? new ShoppingCart(userName));
         }
 
