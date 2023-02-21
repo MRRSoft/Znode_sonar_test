@@ -36,7 +36,9 @@ namespace Basket.API.Controllers
             var _testcode = "@#$%^&*(@#$%^&*SDFGHJ#$%^&@@##";
             var _testcode1 = "@#$%^&*(@#$%^&*SDFGHJ#$%^&@@##";
             var _testcode2 = "@#$%^&*(@#$%^&*SDFGHJ#$%^&@@##";
-            var _testcode3 = "@#$%^&*(@#$%^&*SDFGHJ#$%^&@@##";
+            var _testcode3 = "ajsdg ksjdh asjkdh skjh";
+            var _testcode4 = "@#$%^&*(@#$%^&*SDFGHJ#$%^&@@##";
+            var _testcode5 = "@#$%^&*(@#$%^&*SDFGHJ#$%^&@@## dsfwef q3e4 1234";
             return Ok(basket ?? new ShoppingCart(userName));
         }
 
@@ -50,6 +52,7 @@ namespace Basket.API.Controllers
                 var coupon = await _discountGrpcService.GetDiscount(item.ProductName);
                 item.Price -= coupon.Amount;
             }
+            var _testcode5 = "@#$%^&*(@#$%^&*SDFGHJ#$%^&@@##";
 
             return Ok(await _repository.UpdateBasket(basket));
         }
